@@ -9,5 +9,10 @@
   <p>{{ post.body }}</p>
 
  </div>
- 
+
+ <!-- post.pk- this is a parameter passed which is the primary key  -->
+ <!-- of the post. -->
+ <p><a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a></p>
+ <p><a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a></p>
+
 {% endblock content %}

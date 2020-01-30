@@ -6,12 +6,22 @@
     <title>DJANGO BLOG</title>
     <!-- link to Source Sans Pro, a free font from Google. -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:ǓǏǏ" rel="stylesheet">
-    
+
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1><a href="{% url 'home' %}">Django blog</a></h1>
+      <div class = "nav-left">
+
+       <h1><a href="{% url 'home' %}">Django blog</a></h1>
+
+     </div>
+
+     <div class="nav-right">
+       <!-- link to a page for entering new blog posts. -->
+       <a href="{% url 'post_new' %}">+ New Blog Post</a>
+
+     </div>
     </header>
     <div>
       {% block content %}
